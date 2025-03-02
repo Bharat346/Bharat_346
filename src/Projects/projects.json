@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "Tittle": "Water Distribution System",
+        "lan" : "React Js",
+        "tags" : ["React Js", "Node Js" , "Graph" , "Physics"],
+        "code": "https://github.com/Bharat346/Water-Distribution-System",
+        "project_view": "https://bharat346.github.io/Water-Distribution-System/",
+        "img": "https://arescuer.com/wp-content/uploads/2016/10/Water-Distribution.jpg",
+        "Description": "🛍️ Welcome to India-cart powered by JS, your one-stop destination for all your online shopping needs! 👍 Join Us and open the doors"
+    },
+    {
+        "id": 2,
+        "Tittle": "Tic-Tac-Toe Game",
+        "lan" : "JavaScript",
+        "tags" : ["Html" , "CSS" , "JavaScript"],
+        "code": "https://github.com/Bharat346/Tic-Tac-Toe-game",
+        "project_view": "https://bharat346.github.io/Tic-Tac-Toe-game/",
+        "img": "https://img.freepik.com/premium-vector/tic-tac-toe-game-linear-outline-icon-colour-neon-style-brick-wall-background-light-icon_549897-1770.jpg",
+        "Description": "This JavaScript Tic Tac Toe game is created for entertainment purposes. The developer holds no responsibility for the accuracy or outcomes. Use at your own discretion. Enjoy the game!"
+      },
+      {
+        "id": 3,
+        "Tittle": "QUIZ-GAME",
+        "lan" : "C",
+        "tags" : ["C" , "JavaScript"],
+        "code": "https://drive.google.com/file/d/1Z1yAEc1oIhlVy7uurWAzaB55g8KA_63Y/view?usp=drive_link",
+        "project_view": "https://1drv.ms/p/s!Ar0-4m82ZF8Q3Vln3KZoy8tAs8-F?e=Ajq5ib",
+        "img": "https://i.pinimg.com/736x/a6/15/2c/a6152c294382a7f34c5312be5920e3b5.jpg",
+        "Description": "This quiz game project, created with the C programming language, is intended for educational and recreational purposes only. Users are encouraged to use the project responsibly and ethically."
+    },
+    {
+        "id": 4,
+        "Tittle": "Calculator",
+        "lan" : "JavaScript",
+        "tags" : ["Html" , "CSS" , "JavaScript"],
+        "code": "https://github.com/Bharat346/Calculator",
+        "project_view": "https://bharat346.github.io/Calculator/",
+        "img": "https://static.frontendmasters.com/assets/courses/2019-09-07-calculator-javascript/thumb.webp",
+        "Description": "The JavaScript Calculator project is a simple web-based calculator that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division."
+    }
+]

@@ -1,0 +1,28 @@
+.tag-card {
+    width: 100%;
+    margin-left:5px;
+}
+
+.tags-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.tag {
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--main-color);
+    transition: transform 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.show-more-btn{
+    color: var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+}
