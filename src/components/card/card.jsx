@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaCode, FaExternalLinkAlt } from 'react-icons/fa'; // Importing code and link icons from react-icons
+import { FaCode, FaEye  } from 'react-icons/fa';
+import { HiOutlineViewfinderCircle } from "react-icons/hi2";
 import TagCard from './tags/tag.jsx';
 import ReadMoreless from './tags/ReadMoreLess.jsx'; 
 import './card.css';
@@ -34,7 +35,10 @@ function Card({ imgSrc, imgAlt, name, txt, link1, link2, tagArr }) {
                         gap : "5px",
                         textDecoration : "none"
                     }}>
-                        <FaExternalLinkAlt /> view
+                        <HiOutlineViewfinderCircle 
+                        style={{
+                            fontSize:"22px"
+                        }}  /> view
                     </a>
                 </div>
             </div>

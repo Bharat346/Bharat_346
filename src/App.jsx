@@ -6,15 +6,9 @@ import AboutMe from "./About/about";
 import Projects from "./Projects/projects";
 import Leetcode from "./problem-solving/leetcode";
 import Skills from "./skills/skills";
-import Knows from "./skills/know";
+// import Knows from "./skills/know";
 import Contact from "./contact/contact";
-import {
-  FaHome,
-  FaUser,
-  FaProjectDiagram,
-  FaTools,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FiSearch, FiHome, FiInfo, FiMail, FiUser, FiSettings, FiShoppingCart } from "react-icons/fi";
 
 function App() {
   return (
@@ -23,11 +17,11 @@ function App() {
       <NavBar
         name="Bharat Kumar"
         navLinks={[
-          { text: "Home", url: "#home", icon: <FaHome /> },
-          { text: "About", url: "#about", icon: <FaUser /> },
-          { text: "Projects", url: "#projects", icon: <FaProjectDiagram /> },
-          { text: "Skills", url: "#skill", icon: <FaTools /> },
-          { text: "Contact", url: "#contact", icon: <FaEnvelope /> },
+          { text: "Home", url: "#home", icon: <FiHome  /> },
+          { text: "About", url: "#about", icon: <FiInfo  /> },
+          { text: "Projects", url: "#projects", icon: <FiShoppingCart /> },
+          { text: "Skills", url: "#skill", icon: <FiSettings /> },
+          { text: "Contact", url: "#contact", icon: <FiMail /> },
         ]}
         showSearch={false}
         bgColor={"rgb(0, 0, 0)"}
@@ -43,7 +37,7 @@ function App() {
       <Projects />
       <Leetcode />
       <Skills />
-      <Knows />
+      {/* <Knows /> */}
       <Contact />
     </>
   );

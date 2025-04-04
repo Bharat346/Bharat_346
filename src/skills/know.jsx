@@ -2,39 +2,49 @@ import React from "react";
 import "./skills.css";
 import { FaCode, FaCogs, FaTools, FaGlobe, FaBrain } from "react-icons/fa";
 
-const skillsData = {
-  "General Knowledge": { icon: <FaGlobe style={{
-    color : "var(--main-color)",
-    fontSize : "1.5rem"
-  }} />, skills: ["Geography", "History", "Economy", "Polity", "Biology"] },
-  "Reasoning & Aptitude" : { icon: <FaBrain style={{
-    color : "var(--main-color)",
-    fontSize : "1.5rem"
-  }} />, skills: ["Math", "Reasoning"] }
-};
-
 const Knows = () => {
+  const knowledgeData = {
+    "General Knowledge": { 
+      icon: <FaGlobe className="skill-icon" />, 
+      skills: ["Geography", "History", "Economy", "Polity", "Biology"] 
+    },
+    "Reasoning & Aptitude": { 
+      icon: <FaBrain className="skill-icon" />, 
+      skills: ["Math", "Reasoning"] 
+    }
+  };
+
   return (
-    <>
-      <br />
-      <h1 style={{ color: "var(--main-color)", marginLeft: "30px" }}>Knowledge ( GK / GS) </h1><br />
-      <div className="skill-set">
-        {Object.entries(skillsData).map(([category, data]) => (
-          <div className="skill-set-div" key={category}>
-            <h3 style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              {data.icon} {category}
-            </h3>
-            <div className="skills-cont">
-              {data.skills.map((skill) => (
-                <span key={skill}>{skill}</span>
-              ))}
-            </div>
-          </div>
+    <section className="skills-section">
+      <h1 className="section-title">Knowledge (GK/GS)</h1>
+      <div className="skills-grid">
+        {Object.entries(knowledgeData).map(([category, data]) => (
+          <SkillCard 
+            key={category}
+            category={category}
+            icon={data.icon}
+            skills={data.skills}
+          />
         ))}
       </div>
-      <br /><br />
-    </>
+    </section>
   );
 };
 
-export default Knows;
+const SkillCard = ({ category, icon, skills }) => {
+  return (
+    <div className="skill-card">
+      <div className="skill-header">
+        {icon}
+        <h3>{category}</h3>
+      </div>
+      <div className="skills-container">
+        {skills.map((skill) => (
+          <span key={skill} className="skill-badge">{skill}</span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Knows ;

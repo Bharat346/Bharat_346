@@ -1,5 +1,14 @@
 [
     {
+        "id": 0,
+        "Tittle": "Text-Editor",
+        "lan": "React Js",
+        "tags": ["React Js" , "JavaScript"],
+        "code": "#",
+        "project_view": "#",
+        "img": "https://areknawo.com/images/size/w1000/2021/03/_fch1xw48l.png",
+        "Description": "📝 A powerful and intuitive text editor built with React.js, offering rich text formatting, real-time editing, and a seamless user experience."
+    },{
         "id": 1,
         "Tittle": "Water Distribution System",
         "lan" : "React Js",
@@ -13,21 +22,21 @@
         "id": 2,
         "Tittle": "Tic-Tac-Toe Game",
         "lan" : "JavaScript",
-        "tags" : ["Html" , "CSS" , "JavaScript"],
-        "code": "https://github.com/Bharat346/Tic-Tac-Toe-game",
-        "project_view": "https://bharat346.github.io/Tic-Tac-Toe-game/",
-        "img": "https://img.freepik.com/premium-vector/tic-tac-toe-game-linear-outline-icon-colour-neon-style-brick-wall-background-light-icon_549897-1770.jpg",
+        "tags" : ["JavaScript" , "ReactJs"],
+        "code": "https://github.com/Bharat346/Tic-Tac-Toe/tree/master",
+        "project_view": "https://bharat346.github.io/Tic-Tac-Toe/",
+        "img": "https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg",
         "Description": "This JavaScript Tic Tac Toe game is created for entertainment purposes. The developer holds no responsibility for the accuracy or outcomes. Use at your own discretion. Enjoy the game!"
       },
       {
         "id": 3,
-        "Tittle": "QUIZ-GAME",
-        "lan" : "C",
-        "tags" : ["C" , "JavaScript"],
-        "code": "https://drive.google.com/file/d/1Z1yAEc1oIhlVy7uurWAzaB55g8KA_63Y/view?usp=drive_link",
-        "project_view": "https://1drv.ms/p/s!Ar0-4m82ZF8Q3Vln3KZoy8tAs8-F?e=Ajq5ib",
-        "img": "https://i.pinimg.com/736x/a6/15/2c/a6152c294382a7f34c5312be5920e3b5.jpg",
-        "Description": "This quiz game project, created with the C programming language, is intended for educational and recreational purposes only. Users are encouraged to use the project responsibly and ethically."
+        "Tittle": "PieChart.js",
+        "lan" : "JavaScript",
+        "tags" : ["Canvas" , "HTML5" , "JavaScript"],
+        "code": "https://github.com/Bharat346/PieChart.js",
+        "project_view": "#",
+        "img": "https://s3.envato.com/files/28509167/preview.jpg",
+        "Description": "PieChart.js is a lightweight JavaScript library for rendering customizable pie charts using the HTML5 Canvas API. It provides smooth animations, color customization, and easy-to-use configurations for developers."
     },
     {
         "id": 4,

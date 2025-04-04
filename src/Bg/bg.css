@@ -13,37 +13,50 @@ body {
 
 .area {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: #000000;
   z-index: -1;
+  overflow: hidden;
 }
 
 .squares {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .squares li {
   position: absolute;
-  bottom: -50px; /* Start below the viewport */
-  /* background: rgba(255, 130, 53, 0.6); */
-  border: 2px solid rgba(255, 124, 42, 0.703);
-  opacity: 0.7;
-  border-radius: 20px;
+  bottom: -150px; /* Start further below to prevent gaps */
+  display: block;
+  border: 2px solid rgba(255, 124, 42, 0.7);
   animation: moveSquare linear infinite;
+  will-change: transform; /* Optimize animations */
+  opacity: 0.7;
 }
 
-/* Animation for upward movement */
+/* Smoother animation */
 @keyframes moveSquare {
   0% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
   }
   100% {
-    transform: translateY(-110vh) ;
+    transform: translateY(-120vh);
     opacity: 0;
   }
 }

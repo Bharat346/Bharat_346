@@ -13,10 +13,22 @@ const AboutMe = () => {
       <h1 id="about"
         style={{
           color: "var(--main-color)",
-          marginLeft: "30px",
+          textAlign : "center",
+          margin : "30px 0px",
+          display : "flex",
+          flexDirection : "column",
+          justifyContent : "center",
+          alignItems : "center",
+          gap : "2px"
         }}
       >
         About me
+        <div style={{
+          width : "50px",
+          height : "2px",
+          background : "var(--main-color)",
+          // borderRadius : "0px 0px 10px 10px"
+        }}></div>
       </h1>
       <div className="about-container">
         <div className="about-card">
