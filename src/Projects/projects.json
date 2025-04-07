@@ -15,7 +15,7 @@
         "tags" : ["React Js", "Node Js" , "Graph" , "Physics"],
         "code": "https://github.com/Bharat346/Water-Distribution-System",
         "project_view": "https://bharat346.github.io/Water-Distribution-System/",
-        "img": "https://arescuer.com/wp-content/uploads/2016/10/Water-Distribution.jpg",
+        "img": "https://th.bing.com/th/id/OIP.JeNIyBFgpHpebAMUpABCTgHaFH?w=229&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
         "Description": "🛍️ Welcome to India-cart powered by JS, your one-stop destination for all your online shopping needs! 👍 Join Us and open the doors"
     },
     {
@@ -43,9 +43,9 @@
         "Tittle": "Calculator",
         "lan" : "JavaScript",
         "tags" : ["ReactJs" , "Tailwind" , "JavaScript"],
-        "code": "https://github.com/Bharat346/calculator/blob/gh-pages/README.md",
+        "code": "https://github.com/Bharat346/calculator/tree/gh-pages",
         "project_view": "https://bharat346.github.io/calculator/",
-        "img": "https://static.frontendmasters.com/assets/courses/2019-09-07-calculator-javascript/thumb.webp",
+        "img": "https://img.freepik.com/premium-photo/top-view-blue-calculator-notepad-color-background_260672-4055.jpg?w=740",
         "Description": "The JavaScript Calculator project is a simple web-based calculator that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division."
     }
 ]
