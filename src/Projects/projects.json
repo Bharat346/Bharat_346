@@ -42,9 +42,9 @@
         "id": 4,
         "Tittle": "Calculator",
         "lan" : "JavaScript",
-        "tags" : ["Html" , "CSS" , "JavaScript"],
-        "code": "https://github.com/Bharat346/Calculator",
-        "project_view": "https://bharat346.github.io/Calculator/",
+        "tags" : ["ReactJs" , "Tailwind" , "JavaScript"],
+        "code": "https://github.com/Bharat346/calculator/blob/gh-pages/README.md",
+        "project_view": "https://bharat346.github.io/calculator/",
         "img": "https://static.frontendmasters.com/assets/courses/2019-09-07-calculator-javascript/thumb.webp",
         "Description": "The JavaScript Calculator project is a simple web-based calculator that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division."
     }
