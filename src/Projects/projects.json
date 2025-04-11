@@ -1,5 +1,14 @@
 [
     {
+        "id": 5,
+        "Tittle": "Docs and Notes",
+        "lan": "React Js",
+        "tags": ["React Js", "JavaScript", "Github", "NodeJs", "Tailwind"],
+        "code": "https://github.com/Bharat346/Docs_and_Notes/tree/gh-pages",
+        "project_view": "https://bharat346.github.io/Docs_and_Notes/#/",
+        "img": "https://static.vecteezy.com/system/resources/thumbnails/048/887/903/small_2x/blank-yellow-sticky-note-on-corkboard-photo.jpg",
+        "Description": "📚 A feature-rich platform built with React.js where users can easily access and download documentation and notes in PDF and XLSX formats. Ideal for students, developers, and teams needing structured, downloadable content."
+      },{
         "id": 0,
         "Tittle": "Text-Editor",
         "lan": "React Js",
