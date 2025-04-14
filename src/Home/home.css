@@ -172,12 +172,20 @@ body {
 
 @media (max-width: 480px) {
   .profile-image {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
+  .sec1-btns {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Align buttons inline */
+    gap: 1rem; /* Maintain gap between buttons */
+  }
+
+  .sec1-btns .primary-btn,
+  .sec1-btns .secondary-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem; /* Adjust font size for mobile */
   }
 }
