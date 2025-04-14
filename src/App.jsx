@@ -6,14 +6,15 @@ import BG from "./Bg/bg";
 import { FiHome, FiInfo, FiMail, FiSettings, FiShoppingCart } from "react-icons/fi";
 import Section_1 from './Home/home.jsx';
 import AnimatedSection from './AnimatedSection.jsx';
-import Projects from './Projects/projects';
+// import Projects from './Projects/projects';
+import Contact from './contact/contact';
 
 // Lazy load components
 const AboutMe = lazy(() => import("./About/about"));
-// const Projects = lazy(() => import("./Projects/projects"));
+const Projects = lazy(() => import("./Projects/projects"));
 const Leetcode = lazy(() => import("./problem-solving/leetcode"));
 const Skills = lazy(() => import("./skills/skills"));
-const Contact = lazy(() => import("./contact/contact"));
+// const Contact = lazy(() => import("./contact/contact"));
 
 // Loading component
 const Loading = () => (

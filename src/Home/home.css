@@ -25,8 +25,11 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  /* margin-top: 14px; */
-  margin: 20px auto;
+  margin-top: 30px;
+  /* margin: 20px auto; */
+  position: relative;
+  left: 50vw;
+  transform: translate(-50%);
 }
 
 .sec1-container {
@@ -65,8 +68,8 @@ body {
 }
 
 .description {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  line-height: 1.7;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
 }
 
 /* Buttons */
