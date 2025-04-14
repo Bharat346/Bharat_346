@@ -9,6 +9,7 @@
 body {
   font-family: "Exo", sans-serif;
   overflow-x: hidden;
+  background: #000000; /* Fallback solid color */
 }
 
 .area {
@@ -16,11 +17,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
+  height: 100vh;
   background: #000000;
   z-index: -1;
   overflow: hidden;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .squares {
@@ -28,7 +29,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 200vh; /* Double height to cover scrolling */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -36,28 +37,73 @@ body {
 
 .squares li {
   position: absolute;
-  bottom: -150px; /* Start further below to prevent gaps */
+  bottom: -150px;
   display: block;
   border: 2px solid rgba(255, 124, 42, 0.7);
   animation: moveSquare linear infinite;
-  will-change: transform; /* Optimize animations */
-  opacity: 0.7;
+  will-change: transform;
+  opacity: 0;
+  animation-fill-mode: both;
 }
 
-/* Smoother animation */
+/* Enhanced animation with delayed start */
 @keyframes moveSquare {
   0% {
     transform: translateY(0);
     opacity: 0;
   }
-  20% {
+  5% {
     opacity: 0.7;
   }
-  80% {
+  95% {
     opacity: 0.7;
   }
   100% {
-    transform: translateY(-120vh);
+    transform: translateY(-200vh); /* Cover more distance */
     opacity: 0;
   }
 }
+
+/* Generate squares with different sizes and animations */
+.squares li:nth-child(1) {
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+
+.squares li:nth-child(2) {
+  left: 25%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 15s;
+  animation-delay: 1s;
+}
+
+/* Add more squares with varying properties */
+.squares li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-duration: 25s;
+  animation-delay: 0s;
+}
+
+.squares li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 18s;
+  animation-delay: 3s;
+}
+
+.squares li:nth-child(5) {
+  left: 85%;
+  width: 120px;
+  height: 120px;
+  animation-duration: 30s;
+  animation-delay: 4s;
+}
+
+/* Add more squares as needed... */
