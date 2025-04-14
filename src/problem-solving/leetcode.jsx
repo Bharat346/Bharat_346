@@ -10,13 +10,13 @@ Chart.register(ArcElement, Tooltip, Legend);
 
 // Fallback data in case API fails
 const FALLBACK_DATA = {
-  easySolved: 120,
-  mediumSolved: 60,
-  hardSolved: 20,
-  totalSolved: 200,
-  acceptanceRate: 75.5,
-  ranking: 50000,
-  contributionPoints: 100,
+  easySolved: null,
+  mediumSolved: null,
+  hardSolved: null,
+  totalSolved: null,
+  acceptanceRate: null,
+  ranking: null,
+  contributionPoints: null,
 };
 
 const Leetcode = () => {

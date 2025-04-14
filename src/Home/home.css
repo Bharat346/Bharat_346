@@ -19,12 +19,14 @@ body {
 
 /* Section 1 Styles */
 .section1 {
-  width: 100%;
+  width: 90%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  /* margin-top: 14px; */
+  margin: 20px auto;
 }
 
 .sec1-container {
@@ -63,8 +65,8 @@ body {
 }
 
 .description {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  line-height: 1.6;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.7;
 }
 
 /* Buttons */
@@ -169,11 +171,6 @@ body {
   .profile-image {
     width: 220px;
     height: 220px;
-  }
-
-  .sec1-btns {
-    flex-direction: column;
-    width: 100%;
   }
 
   .primary-btn,

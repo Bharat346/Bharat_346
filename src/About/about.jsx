@@ -14,12 +14,13 @@ const AboutMe = () => {
         style={{
           color: "var(--main-color)",
           textAlign : "center",
-          margin : "30px 0px",
+          margin : "0px 0px 15px 0px",
           display : "flex",
           flexDirection : "column",
           justifyContent : "center",
           alignItems : "center",
-          gap : "2px"
+          gap : "2px",
+          fontSize : "35px"
         }}
       >
         About me

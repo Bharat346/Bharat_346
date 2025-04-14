@@ -16,7 +16,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  width: 100%;
+  width: 90%;
+  margin: 20px auto;
 }
 
 .chart-container {
