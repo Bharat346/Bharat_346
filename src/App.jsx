@@ -1,13 +1,19 @@
-import { lazy, Suspense } from 'react';
-import { motion } from 'framer-motion';
+import { lazy, Suspense } from "react";
+import { motion } from "framer-motion";
 import "./App.css";
 import NavBar from "./NavBar/NavBar";
 import BG from "./Bg/bg";
-import { FiHome, FiInfo, FiMail, FiSettings, FiShoppingCart } from "react-icons/fi";
-import Section_1 from './Home/home.jsx';
-import AnimatedSection from './AnimatedSection.jsx';
+import {
+  FiHome,
+  FiInfo,
+  FiMail,
+  FiSettings,
+  FiShoppingCart,
+} from "react-icons/fi";
+import Section_1 from "./Home/home.jsx";
+import AnimatedSection from "./AnimatedSection.jsx";
 // import Projects from './Projects/projects';
-import Contact from './contact/contact';
+import Contact from "./contact/contact";
 
 // Lazy load components
 const AboutMe = lazy(() => import("./About/about"));
@@ -27,6 +33,14 @@ const Loading = () => (
   </div>
 );
 
+const bottomToTop = {
+  hidden: { opacity: 0, y: 80 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
 
 function App() {
   return (
@@ -45,31 +59,34 @@ function App() {
         bgColor={"rgb(0, 0, 0)"}
       />
 
-      <Suspense fallback={<Loading />}>
-        <AnimatedSection className="w-[90%]">
-          <Section_1 />
-        </AnimatedSection>
+<Suspense fallback={<Loading />}>
 
-        <AnimatedSection animation={{ hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}>
-          <AboutMe />
-        </AnimatedSection>
+<AnimatedSection animation={bottomToTop}>
+  <Section_1 />
+</AnimatedSection>
 
-        {/* <AnimatedSection> */}
-          <Projects />
-        {/* </AnimatedSection> */}
+<AnimatedSection animation={bottomToTop}>
+  <AboutMe />
+</AnimatedSection>
 
-        <AnimatedSection>
-          <Leetcode />
-        </AnimatedSection>
+{/* <AnimatedSection animation={bottomToTop}> */}
+  <Projects />
+{/* </AnimatedSection> */}
 
-        <AnimatedSection animation={{ hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}>
-          <Skills />
-        </AnimatedSection>
-        
-        {/* <AnimatedSection animation={{ hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}> */}
-          <Contact />
-        {/* </AnimatedSection> */}
-      </Suspense>
+<AnimatedSection animation={bottomToTop}>
+  <Leetcode />
+</AnimatedSection>
+
+<AnimatedSection animation={bottomToTop}>
+  <Skills />
+</AnimatedSection>
+
+<AnimatedSection animation={bottomToTop}>
+  <Contact />
+</AnimatedSection>
+
+</Suspense>
+
     </>
   );
 }

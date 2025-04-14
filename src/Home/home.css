@@ -28,7 +28,7 @@ body {
   margin-top: 35px;
   /* margin: 20px auto; */
   position: relative;
-  left: 50vw;
+  left: 50%;
   transform: translate(-50%);
 }
 
@@ -187,5 +187,24 @@ body {
   .sec1-btns .secondary-btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+}
+
+
+@media (max-width : 340px) {
+  .section1{
+    margin-left: 13px;
+  }
+}
+
+@media (max-width : 330px) {
+  .section1{
+    margin-left: 17px;
+  }
+}
+
+@media (max-width : 320px) {
+  .section1{
+    margin-left: 21px;
   }
 }

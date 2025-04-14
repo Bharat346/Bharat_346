@@ -41,7 +41,7 @@ const Projects = () => {
         </h1>
       </div>
       <br />
-      <div className="proj-cards">
+      <div className="proj-cards flex flex-wrap">
         {" "}
         {/* Apply proj-cards here */}
         {isLoading
@@ -53,7 +53,7 @@ const Projects = () => {
                 </AnimatedSection>
               ))
           : projects.map((p, index) => (
-              <AnimatedSection key={index}>
+              <AnimatedSection key={index} style={{ width: "fit-content" }}>
                 <Card
                   imgSrc={p.img}
                   name={p.Tittle}
