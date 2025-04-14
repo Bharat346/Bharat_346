@@ -1,4 +1,3 @@
-// components/AnimatedSection.jsx
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -7,9 +6,9 @@ const variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
-const AnimatedSection = ({ children, animation = variants }) => {
+const AnimatedSection = ({ children, animation = variants, className = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.2 });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
   return (
     <motion.div
@@ -17,6 +16,7 @@ const AnimatedSection = ({ children, animation = variants }) => {
       variants={animation}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
+      className={`w-full ${className}`}
     >
       {children}
     </motion.div>

@@ -399,10 +399,6 @@ body {
     height: 40px;
     width: 40px;
   }
-
-  .nav-search.active .search-input {
-    width: 100px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -417,18 +413,5 @@ body {
   .logo {
     height: 36px;
     width: 36px;
-  }
-
-  .nav-search {
-    padding: 6px 12px;
-  }
-
-  .nav-search.active .search-input {
-    width: 80px;
-    font-size: 14px;
-  }
-
-  .search-icon {
-    font-size: 16px;
   }
 }

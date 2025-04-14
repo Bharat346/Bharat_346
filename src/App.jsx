@@ -46,7 +46,7 @@ function App() {
       />
 
       <Suspense fallback={<Loading />}>
-        <AnimatedSection>
+        <AnimatedSection className="w-[90%]">
           <Section_1 />
         </AnimatedSection>
 
@@ -65,10 +65,10 @@ function App() {
         <AnimatedSection animation={{ hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}>
           <Skills />
         </AnimatedSection>
-
-        <AnimatedSection animation={{ hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}>
+        
+        {/* <AnimatedSection animation={{ hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}> */}
           <Contact />
-        </AnimatedSection>
+        {/* </AnimatedSection> */}
       </Suspense>
     </>
   );

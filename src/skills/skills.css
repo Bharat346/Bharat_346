@@ -3,7 +3,10 @@
   padding: 2rem 0.2rem;
   max-width: 1200px;
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0px auto; */
+  position: relative;
+  left: 50vw;
+  transform: translate(-50%);
 }
 
 .section-title {
