@@ -8,7 +8,7 @@ const variants = {
 
 const AnimatedSection = ({ children, style ,animation = variants, className = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.2, once: false });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
   return (
     <motion.div
