@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { PuffLoader } from "react-spinners";
 import "./App.css";
 import NavBar from "./NavBar/NavBar";
@@ -21,7 +21,7 @@ const Projects = lazy(() => import("./Projects/projects"));
 const Leetcode = lazy(() => import("./problem-solving/leetcode"));
 const Skills = lazy(() => import("./skills/skills"));
 
-// Loading component with 2s timeout
+// Loading component with 5s timeout
 const Loading = () => {
   const [show, setShow] = useState(true);
 
