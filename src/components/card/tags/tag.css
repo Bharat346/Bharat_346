@@ -17,19 +17,20 @@
     scroll-behavior: smooth;
 }
 
-/* Hide scrollbar for WebKit browsers */
+/* For WebKit browsers (Chrome, Safari, Edge) */
 .tags-container::-webkit-scrollbar {
-    height: 0px;
-    width: none;
+    display: none;
 }
 
-.tags-container::-webkit-scrollbar-track {
-    background: transparent;
+/* For Firefox */
+.tags-container {
+    scrollbar-width: none; /* hides scrollbar */
+    -ms-overflow-style: none;  /* IE 10+ */
 }
 
-.tags-container::-webkit-scrollbar-thumb {
-    background: var(--main-color);
-    border-radius: 10px;
+/* For all browsers: Ensure overflow still works if needed */
+.tags-container {
+    overflow: auto; /* or scroll if you want scroll behavior */
 }
 
 .tag {
