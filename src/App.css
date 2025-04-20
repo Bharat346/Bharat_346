@@ -1,10 +1,40 @@
 :root {
-    --bg-color: linear-gradient(45deg, #007bff, #00d4ff);
-    --text-color: rgb(255, 255, 255);
-    --expanded-bg-color: rgb(0, 0, 0);
-    --main-color : rgb(255, 125, 44);
+  --bg-color: linear-gradient(45deg, #007bff, #00d4ff);
+  --text-color: rgb(255, 255, 255);
+  --expanded-bg-color: rgb(0, 0, 0);
+  --main-color: rgb(255, 125, 44);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar for WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111; /* dark track to match black bg */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 140, 64); /* a slightly brighter hover effect */
+}
+
+/* Optional: rounded ends and smoother transition */
+::-webkit-scrollbar-thumb:active {
+  background: rgb(255, 100, 30);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4f4f4f  #111;
 }
