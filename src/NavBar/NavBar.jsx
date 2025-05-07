@@ -92,6 +92,19 @@ const NavBar = ({
     };
   }, []);
 
+  // Add this useEffect to handle body class
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
+  }, [menuOpen]);
+
   return (
     <nav
       ref={navbarRef}

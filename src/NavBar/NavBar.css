@@ -196,32 +196,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Floating Rocket */
-.floating-rocket {
-  position: absolute;
-  right: -50px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: var(--accent-color);
-  opacity: 0.7;
-  animation: float 6s ease-in-out infinite;
-  pointer-events: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar.hidden .floating-rocket {
-  transform: translateY(-100%);
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(-50%) translateX(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-60%) translateX(-10px) rotate(5deg);
-  }
-}
 
 /* Responsive */
 @media (max-width: 992px) {
