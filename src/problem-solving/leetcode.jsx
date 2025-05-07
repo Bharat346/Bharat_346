@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
-import "./Leetcode.css";
+import "./leetcode.css";
 import { PiRanking } from "react-icons/pi";
 import { LuCalendarDays } from "react-icons/lu";
 import { SiDocsdotrs } from "react-icons/si";
