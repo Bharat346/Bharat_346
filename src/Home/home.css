@@ -14,7 +14,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  font-family: 'Exo', sans-serif;
+  /* font-family: 'Exo', sans-serif; */
 }
 
 /* Section 1 */
@@ -57,6 +57,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  font-weight: 500;
 }
 
 .accent {
@@ -87,21 +88,34 @@ body {
 }
 
 .primary-btn {
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+  border: 2px solid var(--main-color);
+  background: transparent;
+  transition: 0.3s;
 }
 
 .secondary-btn {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
+  border: 2px solid var(--main-color);
+  background: transparent;
+  transition: 0.3s;
 }
 
 .primary-btn:hover {
-  box-shadow: 0 0 15px rgba(255, 116, 51, 0.5);
-  transform: translateY(-2px);
+  /* box-shadow: 0 0 15px rgba(255, 116, 51, 0.5); */
+  /* transform: translateY(-2px); */
+  /* border: 2px solid var(--main-color);
+  background: transparent;
+  transition: 0.1s; */
+  background-color: var(--main-color);
+  transition: 0.3s;
 }
 
 .secondary-btn:hover {
-  box-shadow: 0 0 15px rgba(79, 79, 79, 0.5);
-  transform: translateY(-2px);
+  /* box-shadow: 0 0 15px rgba(79, 79, 79, 0.5);
+  transform: translateY(-2px); */
+  background-color: var(--main-color);
+  transition: 0.3s;
 }
 
 /* Profile Image */

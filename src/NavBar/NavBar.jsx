@@ -166,7 +166,6 @@ const NavBar = ({
         </div>
       </div>
 
-      <IoMdRocket className="floating-rocket" />
     </nav>
   );
 };

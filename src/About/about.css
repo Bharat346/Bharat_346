@@ -1,10 +1,7 @@
 .about-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* height: 100vh; */
-  /* background-color: #f5f5f5; */
-  width: 95%;
+  width: 90%;
   position: relative;
   left: 50vw;
   transform: translate(-50%);
@@ -21,7 +18,7 @@
 }
 
 .about-content p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #ffffff;
   line-height: 1.6;
 }

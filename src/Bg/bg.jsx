@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import "./bg.css";
+// import "./bg.css";
 
 const BG = () => {
   const [dimensions, setDimensions] = useState({
