@@ -47,8 +47,8 @@ export default function BlurFadeText({
               exit="hidden"
               variants={combinedVariants}
               transition={{
-                yoyo: Infinity,
                 delay: delay + i * characterDelay,
+                duration,
                 ease: "easeOut",
               }}
               className={cn("inline-block", className)}
@@ -71,8 +71,8 @@ export default function BlurFadeText({
           exit="hidden"
           variants={combinedVariants}
           transition={{
-            yoyo: Infinity,
             delay,
+            duration,
             ease: "easeOut",
           }}
           className={cn("inline-block", className)}
