@@ -60,14 +60,8 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/bharat-kumar",
+        url: "https://www.linkedin.com/in/bharat-kumar-ab49b9297",
         icon: Icons.linkedin,
-        navbar: true,
-      },
-      X: {
-        name: "X",
-        url: "https://twitter.com/Bharat346",
-        icon: Icons.x,
         navbar: true,
       },
       LeetCode: {
