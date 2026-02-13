@@ -1,5 +1,13 @@
 import { Icons } from "@/components/icons";
-import { Home, Code, GraduationCap, Medal } from "lucide-react";
+import {
+  Home,
+  Code,
+  GraduationCap,
+  Medal,
+  User,
+  Cpu,
+  ChartBar,
+} from "lucide-react";
 
 export const DATA = {
   name: "Bharat Kumar",
@@ -8,7 +16,7 @@ export const DATA = {
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/New+Delhi",
   description:
-    "Software Engineer turned Entrepreneur. Love building things and helping people. Very active on Twitter.",
+    "Software Engineer turned Entrepreneur. Love building things and helping people.",
   summary:
     "I'm a full-stack developer and a computer science student at NIT Delhi. I build high-performance web applications and love solving complex problems. My focus is on React, Next.js, and modern web technologies. I also enjoy competitive programming and have solved 150+ LeetCode problems.",
   avatarUrl: "/img/me.jpg",
@@ -40,12 +48,12 @@ export const DATA = {
     "DBMS",
     "TailwindCSS",
     "Data Structure",
-    "Algorithm"
+    "Algorithm",
   ],
   navbar: [
-    { href: "/", icon: Home, label: "Home" },
+    { href: "/#about", icon: User, label: "About" },
+    { href: "/#skills", icon: Cpu, label: "Skills" },
     { href: "/#projects", icon: Code, label: "Projects" },
-    { href: "/#education", icon: GraduationCap, label: "Education" },
     { href: "/#achievements", icon: Medal, label: "Achievements" },
   ],
   contact: {
@@ -126,15 +134,6 @@ export const DATA = {
       end: "2027",
       description:
         "CGPA: 8.43 (Till 4th Sem). Coursework: DSA, DBMS, OS, Computer Networks.",
-    },
-    {
-      school: "Allen Career Institute",
-      href: "https://allen.ac.in",
-      degree: "JEE Main & Advanced Preparation",
-      logoUrl: "/img/allen_logo.png",
-      start: "2022",
-      end: "2023",
-      description: "JEE Main: 98.83 %tile. JEE Advanced: Qualified.",
     },
     {
       school: "Adarsh Vidya Mandir",

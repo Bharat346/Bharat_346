@@ -41,7 +41,7 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-12">
       <Navbar />
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-2">
               <BlurFadeText
@@ -139,26 +139,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="stats">
-        <div className="flex min-h-0 flex-col gap-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-2xl font-bold">Stats</h2>
-          </BlurFade>
-          <div className="flex flex-col gap-6 w-full">
-            <BlurFade
-              delay={BLUR_FADE_DELAY * 9}
-              className="w-[90%] flex justify-center items-center mx-auto"
-            >
-              <img
-                src="https://leetcard.jacoblin.cool/Bharat346?theme=light&font=Outfit&ext=heatmap"
-                alt="LeetCode Stats"
-                className="w-full h-auto border-2 rounded-2xl shadow-md"
-              />
-            </BlurFade>
-          </div>
-        </div>
-      </section>
-
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -218,6 +198,26 @@ export default function Page() {
                 />
               </BlurFade>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="stats">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-2xl font-bold">Stats</h2>
+          </BlurFade>
+          <div className="flex flex-col gap-6 w-full">
+            <BlurFade
+              delay={BLUR_FADE_DELAY * 9}
+              className="w-[90%] flex justify-center items-center mx-auto"
+            >
+              <img
+                src="https://leetcard.jacoblin.cool/Bharat346?theme=light&font=Outfit&ext=heatmap"
+                alt="LeetCode Stats"
+                className="w-full h-auto border-2 rounded-2xl shadow-md"
+              />
+            </BlurFade>
           </div>
         </div>
       </section>
