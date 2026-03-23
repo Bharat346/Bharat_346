@@ -7,6 +7,7 @@ import {
   User,
   Cpu,
   ChartBar,
+  FileText
 } from "lucide-react";
 
 export const DATA = {
@@ -16,9 +17,9 @@ export const DATA = {
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/New+Delhi",
   description:
-    "Software Engineer turned Entrepreneur. Love building things and helping people.",
+    "Software Developer | Passionate about research and problem-solving",
   summary:
-    "I'm a full-stack developer and a computer science student at NIT Delhi. I build high-performance web applications and love solving complex problems. My focus is on React, Next.js, and modern web technologies. I also enjoy competitive programming and have solved 150+ LeetCode problems.",
+    "I am a full-stack , ML developer and a Computer Science student at NIT Delhi. I build high-performance web applications and enjoy solving complex problems. My focus is on React, Next.js, and modern web technologies. I also enjoy competitive programming and have solved 450+ LeetCode problems.",
   avatarUrl: "/img/me.jpg",
   skills: [
     "React",
@@ -90,7 +91,7 @@ export const DATA = {
     {
       company: "ShareLink",
       href: "https://sharelink-psi.vercel.app/",
-      badges: [],
+      badges: ["Top"],
       location: "Remote",
       title: "Full Stack Developer",
       logoUrl: "/projects/ShareLink.png",
@@ -133,7 +134,7 @@ export const DATA = {
       start: "2023",
       end: "2027",
       description:
-        "CGPA: 8.43 (Till 4th Sem). Coursework: DSA, DBMS, OS, Computer Networks.",
+        "CGPA: 8.37. Coursework: DSA, DBMS, OS, Computer Networks,Theory of Computing , Compiler Design.",
     },
     {
       school: "Adarsh Vidya Mandir",
@@ -150,11 +151,18 @@ export const DATA = {
     {
       title: "BharatDocs",
       href: "https://bhdocs.in/",
-      dates: "Dec 2024 - Feb 2025",
+      dates: "Oct 2025 - Present",
       active: true,
       description:
-        "A documentation platform for developers. Features MDX support, hierarchical notes, and admin dashboard.",
-      technologies: ["React", "Next.js", "TailwindCSS", "MDX", "Vercel Blob"],
+        "A documentation platform for developers. High-performance notes management.",
+      features: [
+        "MDX support for rich documentation",
+        "Hierarchical note organization",
+        "Admin dashboard for content management",
+        "Vercel Blob integration for media",
+        "Firewall Integration",
+      ],
+      technologies: ["React", "Next.js", "TailwindCSS", "MDX", "Vercel Blob", "Firewall"],
       links: [
         {
           type: "Website",
@@ -162,7 +170,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Source",
+          type: "Github",
           href: "https://github.com/Bharat346/Docs_and_Notes/tree/gh-pages",
           icon: <Icons.github className="size-3" />,
         },
@@ -171,12 +179,47 @@ export const DATA = {
       video: "",
     },
     {
+      title: "DNA Decoded",
+      // href: "https://bhdocs.in/",
+      dates: "Sep 2025 - Dec 2025",
+      active: false,
+      description:
+        "Bioinformatics project that analyzes genomic variations such as SNPs to predict disease risk in individuals.",
+      features: [
+        "Analyze genetic variations (SNPs) from DNA data",
+        "Compute Polygenic Risk Score (PRS) for individuals",
+        "Train ML models for disease risk classification",
+        "Support research in personalized medicine",
+      ],
+      technologies: ["Machine Learning", "Deep Learning" , "DNA Sequencing" , "Python"],
+      links: [
+        {
+          type: "PDF",
+          href: "https://github.com/Bharat346/DNA-Decoded/blob/main/DNA_Disease_Prediction.pdf",
+          icon: <FileText className="size-3" />,
+        },
+        {
+          type: "Github",
+          href: "https://github.com/Bharat346/DNA-Decoded/",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/dnadecoded.jpg",
+      video: "",
+    },
+    {
       title: "ShareLink",
       href: "https://sharelink-psi.vercel.app/",
       dates: "Aug 2025 - Present",
       active: true,
       description:
-        "Secure real-time file sharing app with P2P transfer and password protection.",
+        "Secure real-time file sharing app with military-grade encryption.",
+      features: [
+        "P2P file transfer using WebSockets",
+        "Password-protected shared links",
+        "End-to-end data encryption",
+        "Real-time transfer progress tracking"
+      ],
       technologies: [
         "React",
         "Node.js",
@@ -205,7 +248,13 @@ export const DATA = {
       dates: "Mar 2024 - Apr 2024",
       active: true,
       description:
-        "Smart water distribution modeling with graph algorithms and physics flow logic.",
+        "Smart water distribution modeling with deep graph optimization.",
+      features: [
+        "Graph-based network modeling",
+        "Physics-based flow optimization",
+        "Real-time pressure visualizations",
+        "Efficient D3.js rendering"
+      ],
       technologies: [
         "React",
         "TailwindCSS",
@@ -228,12 +277,18 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Calculator",
+      title: "Scientific Calculator",
       href: "https://bharat346.github.io/calculator/",
       dates: "Sept 2024 - Oct 2024",
       active: true,
       description:
-        "Scientific calculator with advanced math functions and responsive UI.",
+        "Advanced scientific calculator with complex math support.",
+      features: [
+        "Precision arithmetic logic",
+        "Advanced math function support",
+        "Fully responsive calculation history",
+        "Sleek dark mode interface"
+      ],
       technologies: ["React", "JavaScript", "TailwindCSS"],
       links: [
         {

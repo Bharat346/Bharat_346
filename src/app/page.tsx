@@ -144,13 +144,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-2xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge
                   key={skill}
                   variant="secondary"
-                  className="px-4 py-1.5 text-sm font-medium"
+                  className="px-5 py-2 text-base font-semibold shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
                   {skill}
                 </Badge>
@@ -190,6 +190,7 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={project.description}
+                  features={project.features}
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
@@ -223,7 +224,7 @@ export default function Page() {
       </section>
 
       <section id="achievements">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-12 w-full py-1">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -260,30 +261,64 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="contact">
-        <div className="grid items-center justify-center gap-6 px-4 text-center md:px-6 w-full py-16">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+      <footer className="w-full border-t border-border mt-0 pt-16 pb-28 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-foreground text-background px-4 py-1.5 text-sm font-semibold">
-                Contact
-              </div>
-              <h2 className="text-4xl font-bold tracking-tighter sm:text-6xl">
-                Get in Touch
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.LinkedIn.url}
-                  className="text-blue-500 hover:underline font-medium"
-                >
-                  on LinkedIn
-                </Link>{" "}
-                and I&apos;ll respond whenever I can.
+              <h3 className="text-xl font-bold tracking-tight">{DATA.name}</h3>
+              <p className="text-muted-foreground text-base leading-relaxed max-w-sm">
+                A software engineer dedicated to building high-performance,
+                accessible, and user-centric web applications.
               </p>
             </div>
-          </BlurFade>
+
+            <div className="space-y-4">
+              <h4 className="text-sm font-bold uppercase tracking-widest text-primary/80">
+                Navigation
+              </h4>
+              <nav className="flex flex-col gap-2.5">
+                {DATA.navbar.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-base text-muted-foreground hover:text-primary transition-all duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-sm font-bold uppercase tracking-widest text-primary/80">
+                Socials
+              </h4>
+              <div className="flex flex-wrap gap-4">
+                {Object.entries(DATA.contact.social).map(([name, social]) => (
+                  <Link
+                    key={name}
+                    href={social.url}
+                    title={name}
+                    className="size-11 rounded-xl bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/5 transition-all duration-300 shadow-sm"
+                  >
+                    <social.icon className="size-5" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground font-medium">
+            <p>
+              © {new Date().getFullYear()} {DATA.name}
+            </p>
+            <div className="flex gap-8">
+              {/* <Link href="#" className="hover:text-primary transition-colors">Privacy</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Terms</Link> */}
+            </div>
+          </div>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }
