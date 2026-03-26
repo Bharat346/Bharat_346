@@ -7,7 +7,7 @@ import {
   User,
   Cpu,
   ChartBar,
-  FileText
+  FileText,
 } from "lucide-react";
 
 export const DATA = {
@@ -26,11 +26,13 @@ export const DATA = {
     "Next.js",
     "Typescript",
     "Node.js",
+    "WebSockets",
+    "API Design",
     "Python",
-    "PostgreSQL",
+    "MySQL",
     "MongoDB",
     "Docker",
-    "Java",
+    "JavaScript",
     "C++",
     "Git",
     "ORM",
@@ -38,6 +40,7 @@ export const DATA = {
     "DL",
     "LangChain",
     "Hugging Face",
+    "Gen AI",
     "System Design",
     "Kafka",
     "Kubernetes",
@@ -69,7 +72,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bharat-kumar-ab49b9297",
+        url: "https://www.linkedin.com/in/bharat346/",
         icon: Icons.linkedin,
         navbar: true,
       },
@@ -139,12 +142,11 @@ export const DATA = {
     {
       school: "Adarsh Vidya Mandir",
       href: "#",
-      degree: "Class XII (RBSE Board)",
+      degree: "Senior Secondary (RBSE Board)",
       logoUrl: "/img/school_logo.png",
       start: "2021",
       end: "2022",
-      description:
-        "Percentage: 96.2%. Scored 100/100 in Mathematics. Tahsil Topper.",
+      description: "Percentage: 96.2%. Scored 100/100 in Mathematics.",
     },
   ],
   projects: [
@@ -160,9 +162,23 @@ export const DATA = {
         "Hierarchical note organization",
         "Admin dashboard for content management",
         "Vercel Blob integration for media",
-        "Firewall Integration",
+        "Firewall Integration for unauthorised acess and data leakage",
+        "RAG Integration for AI based search in PDF",
       ],
-      technologies: ["React", "Next.js", "TailwindCSS", "MDX", "Vercel Blob", "Firewall"],
+      technologies: [
+        "Next.js",
+        "TailwindCSS",
+        "MDX",
+        "Vercel Blob",
+        "Firewall",
+        "GenAI",
+        "Tesseract.js",
+        "LangChain",
+        "SQL",
+        "Node.js",
+        "Github API",
+        "PDF Viewer",
+      ],
       links: [
         {
           type: "Website",
@@ -175,7 +191,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/BharatDocs.png",
+      image: "/projects/BhDocs.png",
       video: "",
     },
     {
@@ -191,10 +207,19 @@ export const DATA = {
         "Train ML models for disease risk classification",
         "Support research in personalized medicine",
       ],
-      technologies: ["Machine Learning", "Deep Learning" , "DNA Sequencing" , "Python"],
+      technologies: [
+        "Machine Learning",
+        "Feature Engineering",
+        "SVC",
+        "Logistic Regression",
+        "RandomForest",
+        "Gradient Boosting",
+        "DNA Sequencing",
+        "Python",
+      ],
       links: [
         {
-          type: "PDF",
+          type: "Report",
           href: "https://github.com/Bharat346/DNA-Decoded/blob/main/DNA_Disease_Prediction.pdf",
           icon: <FileText className="size-3" />,
         },
@@ -210,31 +235,30 @@ export const DATA = {
     {
       title: "ShareLink",
       href: "https://sharelink-psi.vercel.app/",
-      dates: "Aug 2025 - Present",
-      active: true,
+      dates: "Aug 2025 - Nov 2025",
+      active: false,
       description:
-        "Secure real-time file sharing app with military-grade encryption.",
+        "A secure real-time communication and file sharing platform enabling peer-to-peer chat, audio messaging, calls, and large file transfers without server storage.",
       features: [
-        "P2P file transfer using WebSockets",
-        "Password-protected shared links",
-        "End-to-end data encryption",
-        "Real-time transfer progress tracking"
+        "Real-time chat between two peers using WebRTC DataChannels",
+        "Audio message recording and direct P2P transfer",
+        "Peer-to-peer audio calling using WebRTC MediaStreams",
+        "Secure session-based connection using access codes",
+        "End-to-end encrypted communication",
+        "Large file transfer with real-time progress tracking",
+        "Direct-to-disk download using File System Access API",
       ],
       technologies: [
-        "React",
+        "Next.js",
         "Node.js",
-        "Express",
+        "WebRTC",
         "WebSockets",
+        "Redis",
         "TailwindCSS",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://sharelink-psi.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
+          type: "Github",
           href: "https://github.com/Bharat346/ShareLink",
           icon: <Icons.github className="size-3" />,
         },
@@ -253,7 +277,7 @@ export const DATA = {
         "Graph-based network modeling",
         "Physics-based flow optimization",
         "Real-time pressure visualizations",
-        "Efficient D3.js rendering"
+        "Efficient D3.js rendering",
       ],
       technologies: [
         "React",
@@ -268,7 +292,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Source",
+          type: "Github",
           href: "https://github.com/Bharat346/Water-Distribution-System",
           icon: <Icons.github className="size-3" />,
         },
@@ -281,13 +305,12 @@ export const DATA = {
       href: "https://bharat346.github.io/calculator/",
       dates: "Sept 2024 - Oct 2024",
       active: true,
-      description:
-        "Advanced scientific calculator with complex math support.",
+      description: "Advanced scientific calculator with complex math support.",
       features: [
         "Precision arithmetic logic",
         "Advanced math function support",
         "Fully responsive calculation history",
-        "Sleek dark mode interface"
+        "Sleek dark mode interface",
       ],
       technologies: ["React", "JavaScript", "TailwindCSS"],
       links: [
@@ -297,7 +320,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
         {
-          type: "Source",
+          type: "Github",
           href: "https://github.com/Bharat346/calculator/tree/gh-pages",
           icon: <Icons.github className="size-3" />,
         },

@@ -27,7 +27,7 @@ export default function Navbar() {
                   href={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-9 sm:size-12 rounded-full hover:bg-primary/10 transition-colors",
+                    "mt-2 rounded-full hover:bg-primary/10 transition-colors",
                   )}
                 >
                   <item.icon className="size-4 sm:size-6" />
@@ -39,7 +39,7 @@ export default function Navbar() {
             </Tooltip>
           </DockIcon>
         ))}
-        <Separator orientation="vertical" className="h-6 mx-0.5 sm:mx-1" />
+        <Separator orientation="vertical" className="h-5 mx-0.5 sm:mx-1" />
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
           .map(([name, social]) => (
@@ -50,7 +50,7 @@ export default function Navbar() {
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-9 sm:size-12 rounded-full hover:bg-primary/10 transition-colors",
+                      "mt-2 rounded-full hover:bg-primary/10 transition-colors",
                     )}
                   >
                     <social.icon className="size-4 sm:size-6" />
