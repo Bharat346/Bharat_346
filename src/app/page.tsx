@@ -88,7 +88,7 @@ export default function Page() {
                       buttonVariants({ variant: "outline", size: "lg" }),
                       "mt-6 text-base",
                     )}
-                  >
+                  > 
                     View Resume
                   </Link>
                 </BlurFade>
