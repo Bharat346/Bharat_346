@@ -17,8 +17,8 @@ interface LogEntry {
   week: string;
   update: string;
   description?: string;
-  learnings: string;
-  challenges: string;
+  learnings?: string;
+  challenges?: string;
 }
 
 interface Props {

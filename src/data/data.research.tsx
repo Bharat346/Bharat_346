@@ -29,4 +29,4 @@ export const research = [
       },
     ],
   },
-];
+] as const;

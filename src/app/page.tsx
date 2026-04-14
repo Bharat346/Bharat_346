@@ -226,7 +226,7 @@ export default function Page() {
               >
                 <ResearchCard
                   title={item.title}
-                  status={item.status as any}
+                  status={item.status}
                   problemStatement={item.problemStatement}
                   whyItMatters={item.whyItMatters}
                   approach={item.approach}
