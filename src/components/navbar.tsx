@@ -27,10 +27,14 @@ export default function Navbar() {
                   href={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "mt-2 rounded-full hover:bg-primary/10 transition-colors",
+                    "mt-2 rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center",
                   )}
                 >
-                  <item.icon className="size-4 sm:size-6" />
+                  {item.icon ? (
+                    <item.icon className="size-4 sm:size-6" />
+                  ) : (
+                    <span className="text-xs font-black uppercase tracking-tighter">{item.label[0]}</span>
+                  )}
                 </Link>
               </TooltipTrigger>
               <TooltipContent sideOffset={10}>
@@ -39,29 +43,6 @@ export default function Navbar() {
             </Tooltip>
           </DockIcon>
         ))}
-        <Separator orientation="vertical" className="h-5 mx-0.5 sm:mx-1" />
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "mt-2 rounded-full hover:bg-primary/10 transition-colors",
-                    )}
-                  >
-                    <social.icon className="size-4 sm:size-6" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent sideOffset={10}>
-                  <p className="font-medium">{social.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
       </Dock>
     </div>
   );

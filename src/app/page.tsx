@@ -5,6 +5,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { ResearchCard } from "@/components/research-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -18,15 +19,38 @@ import {
 } from "@/components/ui/tooltip";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import {
+  Brain,
+  Network,
+  MessageSquare,
+  Globe,
+  Zap,
+  Atom,
+  Microscope,
+} from "lucide-react";
 
 import { useEffect, useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
+const domainIcons: Record<string, any> = {
+  brain: Brain,
+  network: Network,
+  "message-square": MessageSquare,
+  globe: Globe,
+  zap: Zap,
+  atom: Atom,
+  microscope: Microscope,
+};
+
 export default function Page() {
   const [resumeUrl, setResumeUrl] = useState("/img/resume.pdf");
+  const [version, setVersion] = useState("");
 
   useEffect(() => {
+    const v = new Date().getTime().toString();
+    setVersion(v);
+
     // Prevent the browser from jumping to a hash section on reload
     if (window.location.hash) {
       window.history.replaceState(null, "", window.location.pathname);
@@ -34,7 +58,7 @@ export default function Page() {
     window.scrollTo(0, 0);
 
     // Cache bust the resume URL once on mount
-    setResumeUrl(`/img/resume.pdf?v=${new Date().getTime()}`);
+    setResumeUrl(`/img/resume.pdf?v=${v}`);
   }, []);
 
   return (
@@ -55,22 +79,39 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
-              <BlurFade delay={BLUR_FADE_DELAY * 2}>
-                <Link
-                  href={resumeUrl}
-                  target="_blank"
-                  className={cn(
-                    buttonVariants({ variant: "outline", size: "lg" }),
-                    "mt-6 text-base",
-                  )}
-                >
-                  View Resume
-                </Link>
-              </BlurFade>
+              <div className="flex flex-wrap gap-3">
+                <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                  <Link
+                    href={resumeUrl}
+                    target="_blank"
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "lg" }),
+                      "mt-6 text-base",
+                    )}
+                  >
+                    View Resume
+                  </Link>
+                </BlurFade>
+                <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                  <Link
+                    href="/resume-latex"
+                    target="_blank"
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "lg" }),
+                      "mt-6 text-base",
+                    )}
+                  >
+                    View LaTeX
+                  </Link>
+                </BlurFade>
+              </div>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-32 border-2 mt-8">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarImage
+                  alt={DATA.name}
+                  src={`${DATA.avatarUrl}?v=${version}`}
+                />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -160,9 +201,53 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="projects">
+      <section id="research">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-4 py-1.5 text-sm font-semibold">
+                  Research
+                </div>
+                <h2 className="text-4xl font-bold tracking-tighter sm:text-6xl">
+                  Research Work
+                </h2>
+                <p className="text-muted-foreground text-lg md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-[600px] mx-auto">
+                  Exploring new frontiers in communication and intelligence.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="max-w-[800px] mx-auto">
+            {DATA.research.map((item, id) => (
+              <BlurFade
+                key={item.title}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+              >
+                <ResearchCard
+                  title={item.title}
+                  status={item.status as any}
+                  problemStatement={item.problemStatement}
+                  whyItMatters={item.whyItMatters}
+                  approach={item.approach}
+                  tools={item.tools}
+                  progress={item.progress}
+                  expectedOutcome={item.expectedOutcome}
+                  driveLink={item.driveLink}
+                  mentor={item.mentor}
+                  organization={item.organization}
+                  log={item.log}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section id="projects">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 18}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-4 py-1.5 text-sm font-semibold">
@@ -183,7 +268,7 @@ export default function Page() {
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 19 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
@@ -193,7 +278,7 @@ export default function Page() {
                   features={project.features}
                   dates={project.dates}
                   tags={project.technologies}
-                  image={project.image}
+                  image={`${project.image}?v=${version}`}
                   video={project.video}
                   links={project.links}
                 />
@@ -203,20 +288,78 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="stats">
-        <div className="flex min-h-0 flex-col gap-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-2xl font-bold">Stats</h2>
+      <section id="github-stats">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 20}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-4 py-1.5 text-sm font-semibold">
+                  GitHub
+                </div>
+                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+                  Coding Activity & Stats
+                </h2>
+              </div>
+            </div>
           </BlurFade>
-          <div className="flex flex-col gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1000px] mx-auto">
+            <BlurFade delay={BLUR_FADE_DELAY * 21} className="w-full">
+              <div className="backdrop-blur-xl overflow-hidden h-full flex flex-col items-center justify-center">
+                <img
+                  src="https://github-readme-stats-sigma-five.vercel.app/api?username=Bharat346&show_icons=true&theme=default&bg_color=ffffff&title_color=000000&text_color=000000&icon_color=000000"
+                  alt="GitHub Stats"
+                  className="w-full h-auto border-1 hover:border-primary/30 transition-all duration-300 rounded-2xl"
+                />
+              </div>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 22} className="w-full">
+              <div className="overflow-hidden h-full flex flex-col items-center justify-center">
+                <img
+                  src="https://streak-stats.demolab.com?user=Bharat346&theme=default&hide_border=true&background=ffffff&ring=000000&fire=000000&currStreakLabel=000000&sideNums=000000&sideLabels=000000"
+                  alt="GitHub Streak Stats"
+                  className="w-full h-auto border-1 hover:border-primary/30 transition-all duration-300 rounded-2xl"
+                />
+              </div>
+            </BlurFade>
             <BlurFade
-              delay={BLUR_FADE_DELAY * 9}
-              className="w-[90%] flex justify-center items-center mx-auto"
+              delay={BLUR_FADE_DELAY * 23}
+              className="w-full md:col-span-2"
+            >
+              <div className="rounded-3xl border border-border/50 bg-card/40 p-6 backdrop-blur-xl overflow-hidden hover:border-primary/30 transition-all duration-300 h-full flex flex-col items-center justify-center min-h-[150px]">
+                <img
+                  src={`https://ghchart.rshah.org/000000/Bharat346`}
+                  alt="GitHub Heatmap"
+                  className="w-full h-auto dark:brightness-110"
+                />
+              </div>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+
+      <section id="stats">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 24}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-4 py-1.5 text-sm font-semibold">
+                  LeetCode
+                </div>
+                <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+                  Competitive Programming
+                </h2>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="flex flex-col gap-6 w-full ">
+            <BlurFade
+              delay={BLUR_FADE_DELAY * 25}
+              className="w-full flex justify-center items-center mx-auto"
             >
               <img
-                src="https://leetcard.jacoblin.cool/Bharat346?theme=light&font=Outfit&ext=heatmap"
+                src={`https://leetcard.jacoblin.cool/Bharat346?theme=light&font=Outfit&ext=heatmap&v=${version}`}
                 alt="LeetCode Stats"
-                className="w-full h-auto border-2 rounded-2xl shadow-md"
+                className="w-full h-auto border-2 rounded-2xl shadow-md px-1 py-1"
               />
             </BlurFade>
           </div>
@@ -249,6 +392,7 @@ export default function Page() {
                 >
                   <HackathonCard
                     title={project.title}
+                    image={project.image}
                     description={project.description}
                     location={project.location}
                     dates={project.dates}

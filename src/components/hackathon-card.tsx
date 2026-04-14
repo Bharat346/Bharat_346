@@ -30,7 +30,7 @@ export function HackathonCard({
       <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
         <Avatar className="border size-12 m-auto">
           {image && (
-            <AvatarImage src={image} alt={title} className="object-contain" />
+            <AvatarImage src={image} alt={title} className="object-cover w-full h-full" />
           )}
           <AvatarFallback>{title[0]}</AvatarFallback>
         </Avatar>
@@ -52,9 +52,9 @@ export function HackathonCard({
       {links && links.length > 0 && (
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links.map((link, idx) => (
-            <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2">
-                {link.icon}
+            <Link href={link.href} key={idx} target="_blank" rel="noopener noreferrer">
+              <Badge key={idx} title={link.title} className="flex gap-2 hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer capitalize">
+                {link.icon} {" "}
                 {link.title}
               </Badge>
             </Link>
