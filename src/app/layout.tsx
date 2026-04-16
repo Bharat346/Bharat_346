@@ -15,23 +15,28 @@ export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
     default: DATA.name,
-    template: `%s | ${DATA.name} - Software Engineer`,
+    template: `%s | ${DATA.name} - Software Engineer & Researcher`,
   },
   description: DATA.description,
   keywords: [
     "Software Engineer",
-    "React",
-    "Next.js",
-    "Portfolio",
+    "Research Scientist",
+    "Machine Learning",
+    "React Developer",
+    "Next.js Portfolio",
     "Bharat Kumar",
-    "Frontend",
-    "Full Stack",
+    "NIT Delhi",
+    "Competitive Programming",
+    "Full Stack Developer",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Portfolio`,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "en_US",
     type: "website",
     images: [
@@ -58,6 +63,7 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     card: "summary_large_image",
     images: ["/img/me.jpg"],
+    creator: "@Bharat346", // Placeholder, user can update
   },
 };
 

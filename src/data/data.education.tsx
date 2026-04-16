@@ -3,7 +3,7 @@ export const education = [
     school: "National Institute of Technology, Delhi",
     href: "https://nitdelhi.ac.in",
     degree: "B.Tech in Computer Science & Engineering",
-    logoUrl: "/img/nitd_logo.png",
+    logoUrl: "/img/nitd.png",
     start: "2023",
     end: "2027",
     description:
@@ -13,7 +13,7 @@ export const education = [
     school: "Adarsh Vidya Mandir",
     href: "#",
     degree: "Senior Secondary (RBSE Board)",
-    logoUrl: "/img/school_logo.png",
+    logoUrl: "/img/school.png",
     start: "2021",
     end: "2022",
     description:

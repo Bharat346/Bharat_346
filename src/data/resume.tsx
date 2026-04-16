@@ -25,7 +25,7 @@ export const DATA = {
   description:
     "Software Developer | Passionate about research and problem-solving",
   summary:
-    "I am a full-stack , ML developer and a Computer Science student at NIT Delhi. I build high-performance web applications and enjoy solving complex problems. My focus is on React, Next.js, and modern web technologies. I also enjoy competitive programming and have solved 450+ LeetCode problems.",
+    "I am a full-stack , ML developer and a Computer Science student at NIT Delhi. I build high-performance web applications and enjoy solving complex problems. My focus is on React, Next.js, and modern web technologies. I also enjoy competitive programming and have solved 500+ LeetCode problems.",
   avatarUrl: "/img/me.jpg",
   resumeLatexUrl: "/img/resume.tex",
   skills,
