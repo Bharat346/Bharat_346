@@ -28,6 +28,7 @@ interface Props {
     type: string;
     href: string;
   }[];
+  badgeText?: string;
   className?: string;
 }
 
@@ -42,6 +43,7 @@ export function ProjectCard({
   image,
   video,
   links,
+  badgeText = "Project",
   className,
 }: Props) {
   return (
@@ -83,7 +85,7 @@ export function ProjectCard({
               </div>
               <div className="absolute top-4 right-4 z-10">
                  <Badge className="bg-primary/90 text-primary-foreground backdrop-blur-md border-none px-3 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">
-                    Project
+                    {badgeText}
                  </Badge>
               </div>
             </div>

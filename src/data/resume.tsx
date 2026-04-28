@@ -3,9 +3,7 @@ import {
   Code,
   Medal,
   User,
-  Cpu,
   FileText,
-  Brain,
   LayoutGrid,
 } from "lucide-react";
 import { projects } from "./data.projects";
@@ -15,6 +13,8 @@ import { education } from "./data.education";
 import { achievements } from "./data.achievements";
 import { socials } from "./data.socials";
 import { skills } from "./data.skills";
+import { contributions } from "./data.contributions";
+import { packages } from "./data.packages";
 
 export const DATA = {
   name: "Bharat Kumar",
@@ -31,11 +31,11 @@ export const DATA = {
   skills,
   navbar: [
     { href: "/#about", icon: User, label: "About" },
-    { href: "/#skills", icon: Cpu, label: "Skills" },
     { href: "/#research", icon: FileText, label: "Research" },
     { href: "/#projects", icon: LayoutGrid, label: "Projects" },
+    { href: "/#packages", icon: Icons.package, label: "Packages" },
     { href: "/#github-stats", icon: Icons.github, label: "GitHub Stats" },
-    { href: "/#stats", icon: Code, label: "LeetCode Stats" },
+    { href: "/#stats", icon: Icons.leetcode, label: "LeetCode Stats" },
     { href: "/#achievements", icon: Medal, label: "Achievements" },
   ],
   contact: {
@@ -47,5 +47,7 @@ export const DATA = {
   education,
   projects,
   research,
+  contributions,
+  packages,
   hackathons: achievements,
 };

@@ -9,6 +9,8 @@ import EducationSection from "@/components/sections/section-education";
 import SkillsSection from "@/components/sections/section-skills";
 import ResearchSection from "@/components/sections/section-research";
 import ProjectsSection from "@/components/sections/section-projects";
+import ContributionsSection from "@/components/sections/section-contributions";
+import PackagesSection from "@/components/sections/section-packages";
 import GitHubStatsSection from "@/components/sections/section-github-stats";
 import LeetCodeStatsSection from "@/components/sections/section-leetcode-stats";
 import AchievementsSection from "@/components/sections/section-achievements";
@@ -40,11 +42,13 @@ export default function Page() {
         <SkillsSection />
         <ResearchSection />
         <ProjectsSection />
+        <PackagesSection />
       </div>
 
       {/* Stats & Activity */}
       <div className="space-y-24">
         <GitHubStatsSection />
+        <ContributionsSection />
         <LeetCodeStatsSection />
         <AchievementsSection />
       </div>

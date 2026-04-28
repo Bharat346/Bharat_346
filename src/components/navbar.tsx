@@ -21,26 +21,19 @@ export default function Navbar() {
       >
         {DATA.navbar.map((item) => (
           <DockIcon key={item.href}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "mt-2 rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center",
-                  )}
-                >
-                  {item.icon ? (
-                    <item.icon className="size-4 sm:size-6" />
-                  ) : (
-                    <span className="text-xs font-black uppercase tracking-tighter">{item.label[0]}</span>
-                  )}
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent sideOffset={10}>
-                <p className="font-medium">{item.label}</p>
-              </TooltipContent>
-            </Tooltip>
+            <Link
+              href={item.href}
+              className={cn(
+                buttonVariants({ variant: "ghost", size: "icon" }),
+                "mt-2 rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center",
+              )}
+            >
+              {item.icon ? (
+                <item.icon className="size-4 sm:size-6" />
+              ) : (
+                <span className="text-xs font-black uppercase tracking-tighter">{item.label[0]}</span>
+              )}
+            </Link>
           </DockIcon>
         ))}
       </Dock>
